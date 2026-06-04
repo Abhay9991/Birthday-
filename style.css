@@ -1,0 +1,407 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    background:
+    linear-gradient(
+    180deg,
+    #fff8f5,
+    #fdeff1,
+    #fff8f5
+    );
+
+    color:#7b2d43;
+
+    font-family:Georgia, serif;
+
+    text-align:center;
+
+    overflow-x:hidden;
+}
+
+/* HERO */
+
+.hero{
+
+    padding:60px 20px;
+}
+
+.hero h1{
+
+    font-size:2.8rem;
+
+    font-style:italic;
+
+    color:#7b2d43;
+
+    margin-bottom:20px;
+}
+
+.subtitle{
+
+    max-width:900px;
+
+    margin:auto;
+
+    line-height:1.8;
+
+    color:#8f5465;
+
+    font-size:18px;
+}
+
+/* BUTTONS */
+
+button{
+
+    background:
+    linear-gradient(
+    90deg,
+    #d96a89,
+    #9f2d52
+    );
+
+    color:white;
+
+    border:none;
+
+    border-radius:999px;
+
+    padding:15px 30px;
+
+    margin:10px;
+
+    font-size:16px;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+button:hover{
+
+    transform:scale(1.05);
+}
+
+/* CARDS */
+
+.secret,
+.wish-box,
+.reward-box,
+.dont-click-box,
+#giftSection{
+
+    background:#fffdfc;
+
+    border-radius:30px;
+
+    padding:25px;
+
+    margin:25px;
+
+    box-shadow:
+    0 10px 35px rgba(0,0,0,.08);
+
+    color:#7b2d43;
+}
+
+/* TITLES */
+
+h2,h3{
+
+    color:#7b2d43;
+
+    font-style:italic;
+
+    margin-bottom:15px;
+}
+
+/* GALLERY */
+
+.gallery{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(2,1fr);
+
+    gap:12px;
+
+    margin-top:20px;
+}
+
+.gallery img{
+
+    width:100%;
+
+    height:170px;
+
+    object-fit:cover;
+
+    border-radius:20px;
+
+    box-shadow:
+    0 5px 20px rgba(0,0,0,.1);
+}
+
+/* WISH INPUT */
+
+input{
+
+    width:85%;
+
+    max-width:400px;
+
+    padding:14px;
+
+    border-radius:20px;
+
+    border:1px solid #e5bfc8;
+
+    background:white;
+
+    text-align:center;
+
+    font-size:16px;
+}
+
+/* WISH RESULT */
+
+#wishResult{
+
+    margin-top:15px;
+
+    line-height:1.8;
+
+    color:#7b2d43;
+}
+
+/* TOKENS */
+
+.tokens{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    justify-content:center;
+
+    gap:10px;
+}
+
+.token{
+
+    background:
+    linear-gradient(
+    90deg,
+    #f6b3c5,
+    #f8d7de
+    );
+
+    color:#7b2d43;
+
+    padding:12px;
+
+    border-radius:20px;
+
+    font-weight:bold;
+}
+
+/* FINAL MESSAGE */
+
+#finalMessage{
+
+    margin-top:20px;
+
+    line-height:1.8;
+}
+
+/* HIDDEN */
+
+.hidden{
+
+    display:none;
+}
+
+/* COUNTDOWN */
+
+#countdownScreen{
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:100%;
+
+    background:#fff8f5;
+
+    z-index:9999;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+}
+
+#countdownImage{
+
+    width:80%;
+
+    max-width:320px;
+
+    border-radius:30px;
+}
+
+#countdownText{
+
+    margin-top:20px;
+
+    font-size:2rem;
+
+    color:#7b2d43;
+
+    font-style:italic;
+}
+
+/* FIREWORKS */
+
+#birthdayReveal{
+
+    display:none;
+
+    position:fixed;
+
+    inset:0;
+
+    z-index:9998;
+}
+
+#fireworksVideo{
+
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+}
+
+.birthdayText{
+
+    position:absolute;
+
+    top:50%;
+    left:50%;
+
+    transform:
+    translate(-50%,-50%);
+
+    color:white;
+
+    font-size:3rem;
+
+    font-style:italic;
+
+    text-shadow:
+    0 0 15px black;
+}
+
+/* MAIN WEBSITE */
+
+#mainWebsite{
+
+    display:none;
+}
+
+/* PETALS */
+
+.flower{
+
+    position:fixed;
+
+    top:-50px;
+
+    pointer-events:none;
+
+    z-index:9999;
+
+    opacity:0.5;
+
+    filter:blur(2px);
+
+    animation:fall linear forwards;
+}
+@keyframes fall{
+
+    from{
+
+        transform:
+        translateY(-50px)
+        rotate(0deg);
+
+    }
+
+    to{
+
+        transform:
+        translateY(120vh)
+        rotate(720deg);
+
+    }
+
+}
+}
+
+
+/* MOBILE */
+
+@media(max-width:600px){
+
+    .hero h1{
+
+        font-size:2rem;
+    }
+
+    .birthdayText{
+
+        font-size:2rem;
+    }
+
+    .subtitle{
+
+        font-size:15px;
+    }
+
+}
+.secret-title{
+
+    font-size:2.5rem;
+
+    font-weight:bold;
+
+    font-style:italic;
+
+    color:#7b2d43;
+
+    text-align:center;
+
+    margin-bottom:25px;
+
+    text-shadow:
+    2px 2px 8px rgba(0,0,0,.1);
+}
+@media(max-width:600px){
+
+    .secret-title{
+
+        font-size:1.8rem;
+    }
+
+}
